@@ -65,6 +65,8 @@ set(Headers
     "./include/linked_list.h"
     "./include/stack.h"
     "./include/list.hpp"
+    "./include/hashmap.hpp"
+    "./include/bst.hpp"
     )
     
 
@@ -76,6 +78,7 @@ set(Sources
     "./source/linked_list.c"
     "./source/stack.c"
     "./source/list.cpp"
+    "./source/bst.cpp"
 )
 
 # Build the code as a static lib, this is done so google test can link against the code 

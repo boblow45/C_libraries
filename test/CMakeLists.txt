@@ -16,6 +16,8 @@ set(Sources
     "./unit/LinkedListTests.cpp"
     "./unit/StackTests.cpp"
     "./unit/ListTests.cpp"
+    "./unit/HashMapTests.cpp"
+    "./unit/BSTTests.cpp"
     "./main.cpp"
 )
 
