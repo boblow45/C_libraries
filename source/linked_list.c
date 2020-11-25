@@ -72,8 +72,7 @@ int32_t remove_by_index(node_t* head, uint32_t n) {
 		return pop(head);
 	}
 
-	uint32_t i = 0;
-	for(i = 0; i < n - 1; i++) {
+	for(uint32_t i = 0; i < n - 1; i++) {
 		if(current->next == NULL) {
 			return -1;
 		}

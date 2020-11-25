@@ -10,8 +10,8 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # Add indiviual source files
 set(Sources
-    "./unit/ExampleTests.cpp"
     "./unit/BinSearchTests.cpp"
+    "./unit/SortingAlgTest.cpp"
     "./unit/CirBuffTests.cpp"
     "./unit/LinkedListTests.cpp"
     "./unit/StackTests.cpp"

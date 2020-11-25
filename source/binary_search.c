@@ -2,7 +2,7 @@
 
 #include "binary_search.h"
 
-uint32_t binary_search(uint32_t* data, uint32_t l, uint32_t r, uint32_t x) {
+int32_t binary_search(uint32_t* data, uint32_t l, uint32_t r, uint32_t x) {
 	if((r - l) >= 1) {
 		uint32_t mid = 1 + (r - l) / 2;
 		if(data[mid] == x) {
