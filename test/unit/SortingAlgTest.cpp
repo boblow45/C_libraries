@@ -54,4 +54,9 @@ TEST(SortingAlgTests, QuickSort) {
 	int32_t expected_result2[] = {1, 2, 3};
 	quickSort(data2, sizeof(data2) / sizeof(data2[0]), sizeof(data2[0]), cmpfunc);
 	EXPECT_TRUE(0 == std::memcmp(expected_result2, data2, sizeof(data2)));
+
+	int32_t data3[] = {2, 1};
+	int32_t expected_result3[] = {1, 2};
+	quickSort(data3, sizeof(data3) / sizeof(data3[0]), sizeof(data3[0]), cmpfunc);
+	EXPECT_TRUE(0 == std::memcmp(expected_result3, data3, sizeof(data3)));
 }

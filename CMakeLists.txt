@@ -60,6 +60,7 @@ include_directories (
 # Add indiviual include files
 set(Headers
     "./include/binary_search.h"
+    "./include/bit_manipulation.h"
     "./include/sorting_alg.h"
     "./include/circular_buffer.h"
     "./include/linked_list.h"
@@ -73,6 +74,7 @@ set(Headers
 # Add indiviual source files
 set(Sources
     "./source/binary_search.c"
+    "./source/bit_manipulation.c"
     "./source/sorting_alg.c"
     "./source/circular_buffer.c"
     "./source/linked_list.c"
