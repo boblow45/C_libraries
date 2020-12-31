@@ -18,6 +18,7 @@ set(Sources
     "./unit/ListTests.cpp"
     "./unit/HashMapTests.cpp"
     "./unit/BSTTests.cpp"
+    "./unit/RBTreeTests.cpp"
     "./main.cpp"
 )
 

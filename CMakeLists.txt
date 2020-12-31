@@ -68,11 +68,12 @@ set(Headers
     "./include/list.hpp"
     "./include/hashmap.hpp"
     "./include/bst.hpp"
+    "./include/red_black_bst.hpp"
     )
     
-
-# Add indiviual source files
-set(Sources
+    
+    # Add indiviual source files
+    set(Sources
     "./source/binary_search.c"
     "./source/bit_manipulation.c"
     "./source/sorting_alg.c"
@@ -81,6 +82,7 @@ set(Sources
     "./source/stack.c"
     "./source/list.cpp"
     "./source/bst.cpp"
+    "./source/red_black_bst.cpp"
 )
 
 # Build the code as a static lib, this is done so google test can link against the code 
