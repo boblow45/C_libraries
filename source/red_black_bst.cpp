@@ -5,6 +5,10 @@
 
 RBTree::RBTree() {
 	this->nil = new Node();
+	this->nil->color = Color::BLACK;
+	this->nil->left = this->nil;
+	this->nil->right = this->nil;
+	this->nil->parent = this->nil;
 	this->root = this->nil;
 }
 
@@ -45,6 +49,7 @@ void RBTree::insert(const uint32_t& data) {
 	else {
 		y->right = z;
 	}
+
 	this->insertFixViolation(z);
 }
 
@@ -128,12 +133,13 @@ void RBTree::rotateLeft(Node*& x) {
 }
 
 void RBTree::insertFixViolation(Node*& z) {
+	Node* y;
 	while(z->parent->color == Color::RED) {
 		if(z->parent == z->parent->parent->left) {
-			Node* y = z->parent->parent->right;
+			y = z->parent->parent->right;
 			if(y->color == Color::RED) {
-				z->parent->color = Color::BLACK;
 				y->color = Color::BLACK;
+				z->parent->color = Color::BLACK;
 				z->parent->parent->color = Color::RED;
 				z = z->parent->parent;
 			}
@@ -150,22 +156,22 @@ void RBTree::insertFixViolation(Node*& z) {
 			}
 		}
 		else {
-			Node* y = z->parent->parent->left;
+			y = z->parent->parent->left;
 			if(y->color == Color::RED) {
-				z->parent->color = Color::BLACK;
 				y->color = Color::BLACK;
+				z->parent->color = Color::BLACK;
 				z->parent->parent->color = Color::RED;
 				z = z->parent->parent;
 			}
 			else {
 				if(z == z->parent->left) {
 					z = z->parent;
-					this->rotateLeft(z);
+					this->rotateRight(z);
 				}
 
 				z->parent->color = Color::BLACK;
 				z->parent->parent->color = Color::RED;
-				this->rotateRight(z->parent->parent);
+				this->rotateLeft(z->parent->parent);
 			}
 		}
 	}

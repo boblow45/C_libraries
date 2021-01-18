@@ -54,6 +54,7 @@ set(DCMAKE_BUILD_TYPE DEBUG)
 # Add directories of any header files which will be used in the project
 include_directories (
                         "./include"
+                        "./include/c_interfaces"
                         "./source"
 )
 
@@ -65,10 +66,12 @@ set(Headers
     "./include/circular_buffer.h"
     "./include/linked_list.h"
     "./include/stack.h"
-    "./include/list.hpp"
     "./include/hashmap.hpp"
     "./include/bst.hpp"
     "./include/red_black_bst.hpp"
+    "./include/c_interfaces/except.h"
+    "./include/c_interfaces/mem.h"
+    "./include/c_interfaces/list.h"
     )
     
     
@@ -80,9 +83,11 @@ set(Headers
     "./source/circular_buffer.c"
     "./source/linked_list.c"
     "./source/stack.c"
-    "./source/list.cpp"
     "./source/bst.cpp"
     "./source/red_black_bst.cpp"
+    "./source/c_interfaces/except.c"
+    "./source/c_interfaces/mem.c"
+    "./source/c_interfaces/list.c"
 )
 
 # Build the code as a static lib, this is done so google test can link against the code 

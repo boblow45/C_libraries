@@ -15,10 +15,10 @@ set(Sources
     "./unit/CirBuffTests.cpp"
     "./unit/LinkedListTests.cpp"
     "./unit/StackTests.cpp"
-    "./unit/ListTests.cpp"
     "./unit/HashMapTests.cpp"
     "./unit/BSTTests.cpp"
     "./unit/RBTreeTests.cpp"
+    "./unit/ListTest.cpp"
     "./main.cpp"
 )
 
